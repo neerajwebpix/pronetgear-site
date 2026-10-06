@@ -218,3 +218,5 @@ ul.ticks li::before{content:"";position:absolute;left:0;top:.35em;width:18px;hei
 .card .sell{color:var(--ink);font-weight:800}
 .card .age{margin:6px 0 0;font-size:.8rem;color:var(--muted)}
 .price-box .save{display:inline-block;background:#e4f6ec;color:#0f6b3a;font-weight:700;font-size:.78rem;padding:2px 8px;border-radius:999px}
+
+.card .was.nostrike{text-decoration:none}
