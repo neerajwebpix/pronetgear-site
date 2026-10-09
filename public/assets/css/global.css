@@ -106,7 +106,7 @@ p{margin:0 0 1em}
 /* product card (whole card is one link) */
 .card{display:flex;flex-direction:column;background:var(--card);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;text-decoration:none;color:var(--text);transition:transform .15s,box-shadow .15s,border-color .15s;height:100%}
 .card:hover{transform:translateY(-2px);box-shadow:var(--shadow);border-color:#c8d0df;color:var(--text)}
-.card .media{aspect-ratio:16/10;background:linear-gradient(135deg,#eef2f8,#e3e9f3);display:flex;align-items:center;justify-content:center;position:relative}
+.card .media{aspect-ratio:4/3;background:linear-gradient(135deg,#eef2f8,#e3e9f3);display:flex;align-items:center;justify-content:center;position:relative}
 .card .media svg{width:56px;height:56px;color:#6b7a96}
 .card .media img{width:100%;height:100%;object-fit:cover;display:block}
 .card .body{padding:14px 16px 16px;display:flex;flex-direction:column;gap:8px;flex:1}
@@ -206,12 +206,12 @@ ul.ticks li::before{content:"";position:absolute;left:0;top:.35em;width:18px;hei
 @media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
 
 /* photos */
-.card .media img,.p-media img{object-fit:contain;background:#f2f4f8}
+.card .media img,.p-media img{object-fit:cover;background:#f2f4f8}
 .card .media picture,.p-media picture{position:absolute;inset:0;display:block}
 .card .media img,.p-media img{width:100%;height:100%}
 .gallery{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:14px}
 .gallery figure{margin:0;background:#f2f4f8;border:1px solid var(--line);border-radius:12px;overflow:hidden}
-.gallery img{display:block;width:100%;height:190px;object-fit:contain}
+.gallery img{display:block;width:100%;height:auto;aspect-ratio:4/3;object-fit:cover}
 .gallery figcaption{padding:8px 12px;font-size:.84rem;color:var(--muted);background:#fff;border-top:1px solid var(--line)}
 
 .card .was{color:var(--muted);font-size:.78rem;text-decoration:line-through;margin-left:4px}

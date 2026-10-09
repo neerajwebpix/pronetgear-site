@@ -41,7 +41,7 @@
   var big=ov.querySelector('img'),cap=ov.querySelector('.lb-c'),cur=0;
   function show(i){
     cur=(i+imgs.length)%imgs.length;var im=imgs[cur],src=im.parentNode.querySelector('source');
-    big.src=src?src.getAttribute('srcset'):im.src;big.alt=im.alt;cap.textContent=im.alt+(imgs.length>1?'  ('+(cur+1)+' / '+imgs.length+')':'');
+    big.src=im.getAttribute('data-full')||(src?src.getAttribute('srcset'):im.src);big.alt=im.alt;cap.textContent=im.alt+(imgs.length>1?'  ('+(cur+1)+' / '+imgs.length+')':'');
     ov.classList.toggle('single',imgs.length<2);
   }
   function open(i){show(i);ov.hidden=false;document.body.style.overflow='hidden';ov.querySelector('.lb-x').focus();}
